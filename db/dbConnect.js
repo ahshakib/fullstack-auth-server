@@ -3,9 +3,7 @@ require("dotenv").config();
 
 async function dbConnect() {
   mongoose
-    .connect(process.env.DB_URL, {
-      useNewUrlParser: true
-    })
+    .connect(process.env.DB_URL)
     .then(() => {
       console.log("Database Connected!");
     })
